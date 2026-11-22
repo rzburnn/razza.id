@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KALCER RUN</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell" id="game-shell">
+    <header class="hud" aria-label="Status Permainan">
+      <div class="hud-left">
+        <div class="stat-pill">
+          <span class="label">SKOR</span>
+          <span class="value cyan" id="score">0</span>
+        </div>
+        <div class="stat-pill">
+          <span class="label">KOIN</span>
+          <span class="value gold" id="money">0</span>
+        </div>
+        <div class="stat-pill">
+          <span class="label">COMBO</span>
+          <span class="value pink" id="combo">x1</span>
+        </div>
+      </div>
+
+      <div class="hud-right">
+        <span class="phase-badge" id="phase-label">FASE 1: KOTA KALCER</span>
+        <button class="pause-btn" id="fullscreen-btn" type="button">FULLSCREEN</button>
+        <button class="pause-btn" id="pause-btn" type="button">PAUSE</button>
+      </div>
+    </header>
+
+    <section class="stage-frame" id="stage-frame">
+      <canvas id="game" width="800" height="400"></canvas>
+
+      <div class="hit-flash" id="hit-flash"></div>
+      <div class="announcement" id="announcement"></div>
+
+      <div class="ending-layer" id="ending-layer" style="display: none;">
+        <div class="ending-title" id="ending-title"></div>
+      </div>
+
+      <div class="dialogue-box" id="dialogue-box" aria-hidden="true">
+        <div class="dialogue-speaker" id="dialogue-speaker">KALCER RUN</div>
+        <div class="dialogue-text" id="dialogue-text"></div>
+        <div class="dialogue-hint">Klik atau tekan SPASI untuk melanjutkan</div>
+      </div>
+
+      <div class="overlay" id="overlay">
+        <div class="badge-top">SURVIVAL ENDLESS</div>
+        <h1 class="title-mark">KALCER <span>RUN</span></h1>
+        <p class="intro-copy">Hindari rintangan jalanan, kumpulkan koin tengkorak, dan bertahan sampai Fase 2!</p>
+        <button class="start-btn" id="start-button" type="button">MULAI LARI (SPASI / KLIK)</button>
+        <div class="hint">SPASI / W / UP / KLIK: Lompat &amp; Double Jump · P / ESC: Pause · F: Fullscreen</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="jsGames.js"></script>
+</body>
+</html>
